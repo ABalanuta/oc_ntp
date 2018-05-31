@@ -1,5 +1,5 @@
 NAME=oc-ntp
-VERSION=0.13
+VERSION=0.14-dev
 
 DEPS := ntp ntpstat
 WORK_DIR=src
