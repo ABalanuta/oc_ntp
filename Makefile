@@ -1,5 +1,5 @@
 NAME=oc-ntp
-VERSION=0.12
+VERSION=0.13
 
 DEPS := ntp ntpstat
 WORK_DIR=src
@@ -19,5 +19,5 @@ COMMON_FPM_ARGS=\
 
 .PHONY: package
 package:
-	fpm -s dir -t deb $(COMMON_FPM_ARGS) $(foreach dep,$(deps),-d $(dep))
+	fpm -s dir -t deb $(COMMON_FPM_ARGS) $(foreach dep,$(DEPS),-d $(dep))
 	mv $(NAME)_$(VERSION)_*.deb build/
