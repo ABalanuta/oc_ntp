@@ -1,8 +1,10 @@
 NAME=oc-ntp
-VERSION=0.14-dev
-
+VERSION=0.15
+MAINTAINER='Artur Balanuta'
 DEPS := ntp ntpstat
 WORK_DIR=src
+
+DESCRIPTION='OpenChirp.io NTP specific configurations'
 
 POSTINSTALL_SCRIPT=deb/post-install.sh
 PREINSTALL_SCRIPT=deb/pre-install.sh
@@ -15,7 +17,10 @@ COMMON_FPM_ARGS=\
 	--before-install $(PREINSTALL_SCRIPT) \
 	--after-remove $(POSTUNINSTALL_SCRIPT) \
 	--name $(NAME) \
-	--version $(VERSION)
+	--version $(VERSION) \
+	--maintainer $(MAINTAINER) \
+	--description $(DESCRIPTION) \
+	--verbose
 
 .PHONY: package
 package:
