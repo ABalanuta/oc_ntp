@@ -1,5 +1,5 @@
 NAME=oc-ntp
-VERSION=0.15
+VERSION=0.16
 MAINTAINER='Artur Balanuta'
 DEPS := ntp ntpstat
 WORK_DIR=src
@@ -20,6 +20,8 @@ COMMON_FPM_ARGS=\
 	--version $(VERSION) \
 	--maintainer $(MAINTAINER) \
 	--description $(DESCRIPTION) \
+	--config-files /etc/ntp.conf \
+	--deb-config /etc/ntp.conf \
 	--verbose
 
 .PHONY: package
