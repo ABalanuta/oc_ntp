@@ -1,5 +1,5 @@
 NAME=oc-ntp
-VERSION=0.16
+VERSION=0.17
 MAINTAINER='Artur Balanuta'
 DEPS := ntp ntpstat
 WORK_DIR=src
