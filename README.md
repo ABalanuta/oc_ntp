@@ -4,6 +4,6 @@
 
 
 ```
-sudo dpkg -i --force-overwrite oc-ntp_0.x_armhf.deb
+sudo dpkg -i oc-ntp_0.x_armhf.deb
 sudo apt-get install -f
 ```
