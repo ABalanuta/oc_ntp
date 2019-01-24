@@ -1,8 +1,9 @@
 NAME=oc-ntp
-VERSION=0.18
+VERSION=0.19
 MAINTAINER='Artur Balanuta'
 DEPS := ntp ntpstat
 WORK_DIR=src
+ARCH=all
 
 DESCRIPTION='OpenChirp.io NTP specific configurations'
 
@@ -26,5 +27,5 @@ COMMON_FPM_ARGS=\
 
 .PHONY: package
 package:
-	fpm -s dir -t deb $(COMMON_FPM_ARGS) $(foreach dep,$(DEPS),-d $(dep))
+	fpm -s dir -t deb -a $(ARCH) $(COMMON_FPM_ARGS) $(foreach dep,$(DEPS),-d $(dep))
 	mv $(NAME)_$(VERSION)_*.deb build/
