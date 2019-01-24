@@ -10,6 +10,19 @@ curl -s https://api.github.com/repos/ABalanuta/oc_ntp/releases/latest \
 | tr -d \" \
 | wget -qi -
 
-sudo dpkg -i oc-ntp_0.x_armhf.deb
+sudo dpkg -i oc-ntp_*_armhf.deb
 sudo apt-get install -fy
+```
+
+## Check Sync
+
+```
+ntpstat
+
+ntpq -pn
+```
+
+## Removing 
+```
+dpkg --purge oc-ntp
 ```
