@@ -12,6 +12,8 @@ curl -s https://api.github.com/repos/ABalanuta/oc_ntp/releases/latest \
 sudo apt update
 sudo dpkg -i oc-ntp_*.deb
 sudo apt-get install -fy
+rm oc-ntp_*.deb
+
 ```
 
 ## Check Sync
