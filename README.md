@@ -9,8 +9,8 @@ curl -s https://api.github.com/repos/ABalanuta/oc_ntp/releases/latest \
 | cut -d : -f 2,3 \
 | tr -d \" \
 | wget -i -
-
-sudo dpkg -i oc-ntp_*_armhf.deb
+sudo apt update
+sudo dpkg -i oc-ntp_*.deb
 sudo apt-get install -fy
 ```
 
